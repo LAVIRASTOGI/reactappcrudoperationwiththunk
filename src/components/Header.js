@@ -9,9 +9,12 @@ class Header extends Component {
     }
 
     render() {
+       let au= localStorage.getItem('Authenticated')
         return (
             <div className="topnav">
+
                 <Link to="/">Home</Link>
+               {au=="true"?<Link to="/logout">Logout</Link>:<Link to="/login">Login</Link>} 
               <Link to="/about-us">About Us</Link>  
               <Link to="/counter">Counter</Link>
                 <Link to="/emp-list">Employee List</Link>

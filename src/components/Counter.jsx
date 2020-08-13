@@ -2,6 +2,7 @@ import * as actionType from '../components/store/actions/actionType'
 
 import React, { Component } from 'react';
 
+import Header from './Header';
 import { connect } from 'react-redux';
 
 function mapStateToProps(state) {
@@ -21,6 +22,7 @@ class Counter extends Component {
     render() {
         return (
             <div>
+            <Header></Header>
                 <h1>Counter:{this.props.data.counter}</h1>
                 <button onClick={()=>{this.props.OnIncrementAction()}}>Increment</button>
                 <button onClick={()=>{this.props.OnDecrementAction()}}>Decrement</button>

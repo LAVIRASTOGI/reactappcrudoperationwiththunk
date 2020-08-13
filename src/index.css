@@ -36,3 +36,8 @@ body {
     color: white;
     text-align: center;
 }
+
+.app1 {
+    min-height: 100vh;
+    ;
+}

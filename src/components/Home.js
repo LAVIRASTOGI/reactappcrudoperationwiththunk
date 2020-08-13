@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Header from './Header'
+
 class Home extends Component {
 
     constructor(props, context) {
@@ -7,13 +9,14 @@ class Home extends Component {
         //this.goToEmployeeList =  this.goToEmployeeList.bind(this);
     }
     goToEmployeeList(){
-        this.props.history.push("/emp-list");
+        this.props.history.push("/login");
     }
     render() {
         return (
             <div>
+              <Header />
                 <h1>Heome Page !!!</h1>
-                <button onClick={()=>this.goToEmployeeList()}>Go to Employee List</button>
+                <button onClick={()=>this.goToEmployeeList()}>SIGN IN</button>
             </div>
         );
     }

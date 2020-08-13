@@ -1,3 +1,4 @@
+import Header from './Header';
 import React from 'react';
 import employeeService from '../services/employee.service';
 
@@ -22,13 +23,13 @@ class EmpDetail extends React.Component {
         }
         render() {
             return ( < div >
-                <
-                h1 > Employee Details: < /h1>
+                <Header></Header>
+                <h1> Employee Details: </h1>
                 Emp Id: { this.state.employee.id } < br / >
                 Emp Name: { this.state.employee.name } < br / >
                 Emp Age: { this.state.employee.age } < br / >
-                <
-                /div>)
+                
+                </div>)
             }
         }
 

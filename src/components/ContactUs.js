@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Header from './Header'
+
 class ContactUs extends Component {
 
     constructor(props, context) {
@@ -9,6 +11,7 @@ class ContactUs extends Component {
     render() {
         return (
             <div>
+            <Header></Header>
                 Contact Us !!!
             </div>
         );

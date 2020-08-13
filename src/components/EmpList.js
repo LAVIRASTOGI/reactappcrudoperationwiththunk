@@ -2,6 +2,7 @@ import * as actionTypes from '../components/store/actions/actionType'
 
 import React, { Component } from "react";
 
+import Header from './Header'
 import { Link } from "react-router-dom";
 import { actionCreators } from "../components/store/actions/actionCreator";
 import { bindActionCreators } from 'redux';
@@ -23,7 +24,7 @@ class EmpList extends Component {
 
 state={
   employee: { _id: '', id: '', name: '', age: '' },
-  showbutton:"true"
+  showbutton:true
 
 }
   componentDidMount() {
@@ -55,25 +56,31 @@ state={
   })
   }
   showEmployee =(EmpId)=>{
-  //   this.props.getEmployeeIdData(EmpId);
-  //  this.setState({
-  //    employee:{
-  //     _id: this.props.data.employee._id,
-  //      id:this.props.data.employee.id,
-  //      name:this.props.data.employee.name,
-  //      age:this.props.data.employee.age
-  //    }
-  //  })
-  employeeService.getEmployee(EmpId).then(res => {
-    var empData = res.data;
+    this.props.getEmployeeIdData(EmpId);
+  
+//   employeeService.getEmployee(EmpId).then(res => {
+//     var empData = res.data;
 
     this.setState({
         ...this.state,
-        employee: empData,
+       
         showbutton:false
     });
-})
+
   }
+
+componentWillReceiveProps(nextProps){
+  this.setState({
+    employee:{
+     _id: nextProps.data.employee._id,
+      id:nextProps.data.employee.id,
+      name:nextProps.data.employee.name,
+      age:nextProps.data.employee.age,
+      
+    },
+    
+  })
+}
   handleChange(event, inputName) {
         var inputValue = event.target.value;
         this.setState({
@@ -87,6 +94,7 @@ state={
   render() {
     return (
       <div>
+      <Header></Header>
         Emp Id:
         <input type="text" value={this.state.employee.id} onChange={(event) => this.handleChange(event, 'id')} />
         <br />

@@ -1,7 +1,9 @@
-import React from 'react';
-import { Route, Link } from 'react-router-dom';
-import FrontEndTopic from "./FrontEndTopic";
+import { Link, Route } from 'react-router-dom';
+
 import BackEndTopic from "./BackEndTopic";
+import FrontEndTopic from "./FrontEndTopic";
+import Header from './Header';
+import React from 'react';
 
 class Topics extends React.Component {
 
@@ -13,6 +15,7 @@ class Topics extends React.Component {
     render() {
         return (
             <div>
+         
                 <h1>Topics:</h1>
                 <Link to={`${this.props.match.path}/front-end`}>Front End Topics</Link>
                 &nbsp;
