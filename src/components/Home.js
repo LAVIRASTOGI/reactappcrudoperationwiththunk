@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from './Header'
+import SimpleBreadcrumbs from '../shared/Breadcrums'
 
 class Home extends Component {
 
@@ -15,6 +16,7 @@ class Home extends Component {
         return (
             <div>
               <Header />
+<SimpleBreadcrumbs></SimpleBreadcrumbs>
                 <h1>Heome Page !!!</h1>
                 <button onClick={()=>this.goToEmployeeList()}>SIGN IN</button>
             </div>

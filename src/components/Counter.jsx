@@ -3,6 +3,7 @@ import * as actionType from '../components/store/actions/actionType'
 import React, { Component } from 'react';
 
 import Header from './Header';
+import SimpleBreadcrumbs from '../shared/Breadcrums'
 import { connect } from 'react-redux';
 
 function mapStateToProps(state) {
@@ -23,6 +24,7 @@ class Counter extends Component {
         return (
             <div>
             <Header></Header>
+            <SimpleBreadcrumbs></SimpleBreadcrumbs>
                 <h1>Counter:{this.props.data.counter}</h1>
                 <button onClick={()=>{this.props.OnIncrementAction()}}>Increment</button>
                 <button onClick={()=>{this.props.OnDecrementAction()}}>Decrement</button>

@@ -14,6 +14,7 @@ import Home from "./components/Home";
 import Login from './components/Login'
 import Logout from './components/Logout'
 import PrivateRoute from './components/PrivateRoute'
+import SimpleBreadcrumbs from './shared/Breadcrums'
 import Topics from "./components/Topics";
 import { connect } from 'react-redux';
 import { useState } from 'react';
@@ -32,7 +33,7 @@ export default function App () {
         <ThemeContext.Provider value={themes}>
          <Button clickBtn={colorHandler} ></Button> 
         </ThemeContext.Provider>
-     
+     {/* <SimpleBreadcrumbs></SimpleBreadcrumbs> */}
 
 <Router>
     

@@ -1,5 +1,6 @@
 import Header from './Header'
 import React from 'react';
+import SimpleBreadcrumbs from '../shared/Breadcrums'
 
 class Login extends React.Component {
     constructor(props) {
@@ -43,6 +44,7 @@ class Login extends React.Component {
     render() { 
         return ( <div>
            <Header/>
+           <SimpleBreadcrumbs></SimpleBreadcrumbs>
 
             Name:
         <input type="text" value={this.state.employee.name} onChange={(event) => this.handleChange(event, 'name')} />

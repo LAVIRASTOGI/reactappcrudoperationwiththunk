@@ -4,6 +4,7 @@ import React, { Component } from "react";
 
 import Header from './Header'
 import { Link } from "react-router-dom";
+import SimpleBreadcrumbs from '../shared/Breadcrums'
 import { actionCreators } from "../components/store/actions/actionCreator";
 import { bindActionCreators } from 'redux';
 import { connect } from "react-redux";
@@ -95,6 +96,8 @@ componentWillReceiveProps(nextProps){
     return (
       <div>
       <Header></Header>
+      <SimpleBreadcrumbs></SimpleBreadcrumbs>
+<br></br>
         Emp Id:
         <input type="text" value={this.state.employee.id} onChange={(event) => this.handleChange(event, 'id')} />
         <br />

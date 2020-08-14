@@ -1,4 +1,5 @@
 import React from 'react';
+import SimpleBreadcrumbs from '../shared/Breadcrums'
 
 class BackEndTopic extends React.Component {
 
@@ -10,6 +11,7 @@ class BackEndTopic extends React.Component {
     render() {
         return (
             <div>
+                <SimpleBreadcrumbs></SimpleBreadcrumbs>
                 <h1>Back End Topic</h1>
             </div>
         );

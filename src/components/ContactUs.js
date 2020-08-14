@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from './Header'
+import SimpleBreadcrumbs from '../shared/Breadcrums'
 
 class ContactUs extends Component {
 
@@ -12,6 +13,7 @@ class ContactUs extends Component {
         return (
             <div>
             <Header></Header>
+            <SimpleBreadcrumbs></SimpleBreadcrumbs>
                 Contact Us !!!
             </div>
         );

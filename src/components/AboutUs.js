@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from './Header'
+import SimpleBreadcrumbs from '../shared/Breadcrums'
 
 class AboutUs extends Component {
 
@@ -9,11 +10,14 @@ class AboutUs extends Component {
     }
 
     render() {
-        return (
-            <div>
-            <Header></Header>
-                About Us !!!
-            </div>
+        return ( <
+            div >
+            <
+            Header > < /Header> <
+            SimpleBreadcrumbs > < /SimpleBreadcrumbs>
+            About Us!!!
+            <
+            /div>
         );
     }
 }

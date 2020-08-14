@@ -1,5 +1,6 @@
 import Header from './Header';
 import React from 'react';
+import SimpleBreadcrumbs from '../shared/Breadcrums'
 import employeeService from '../services/employee.service';
 
 class EmpDetail extends React.Component {
@@ -24,6 +25,10 @@ class EmpDetail extends React.Component {
         render() {
             return ( < div >
                 <Header></Header>
+                <SimpleBreadcrumbs></SimpleBreadcrumbs>
+
+                <br>
+                </br>
                 <h1> Employee Details: </h1>
                 Emp Id: { this.state.employee.id } < br / >
                 Emp Name: { this.state.employee.name } < br / >

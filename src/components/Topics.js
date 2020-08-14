@@ -4,6 +4,7 @@ import BackEndTopic from "./BackEndTopic";
 import FrontEndTopic from "./FrontEndTopic";
 import Header from './Header';
 import React from 'react';
+import SimpleBreadcrumbs from '../shared/Breadcrums'
 
 class Topics extends React.Component {
 
@@ -15,7 +16,8 @@ class Topics extends React.Component {
     render() {
         return (
             <div>
-         
+         <Header></Header>
+         <SimpleBreadcrumbs></SimpleBreadcrumbs>
                 <h1>Topics:</h1>
                 <Link to={`${this.props.match.path}/front-end`}>Front End Topics</Link>
                 &nbsp;
