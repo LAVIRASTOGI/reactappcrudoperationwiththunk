@@ -9,6 +9,7 @@ import Counter from './components/Counter'
 import EmpDetail from "./components/emp-details";
 import EmpList from "./components/EmpList";
 import Footer from "./components/Footer";
+import HOCexample from './components/HOC/file1'
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Login from './components/Login'
@@ -36,7 +37,7 @@ export default function App () {
      {/* <SimpleBreadcrumbs></SimpleBreadcrumbs> */}
 
 <Router>
-    
+    {/* route can be also written as     <Route path="/home" render={() => <div>Home</div>} /> */}
     <Switch>
       <Route path='/' exact component={Home} />
       <Route path='/about-us' component={AboutUs} />
@@ -47,6 +48,7 @@ export default function App () {
       <Route path='/emp-detail/:id' component={EmpDetail} />
       <Route path='/contact-us' component={ContactUs} />
       <Route path='/topics' component={Topics} />
+      <Route path='/hocexample' component={HOCexample} />
       <Route path='*' component={() => { return (<div>Error 404</div>); }} />
     </Switch>
     <Footer />

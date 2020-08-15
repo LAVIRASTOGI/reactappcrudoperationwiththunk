@@ -20,6 +20,7 @@ class Header extends Component {
                 <Link to="/emp-list">Employee List</Link>
                 <Link to="/contact-us">Contact Us</Link>
                 <Link to="/topics">Topics</Link>
+                <Link to="/hocexample">Hoc Example</Link>
             </div>
         );
     }
