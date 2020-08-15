@@ -24,7 +24,8 @@ class Topics extends React.Component {
                 <Link to={this.props.match.path + '/back-end'}>Back End Topics</Link>
 
                 <Route path={this.props.match.path + '/front-end'} component={FrontEndTopic} />
-                <Route path={`${this.props.match.path}/back-end`} component={BackEndTopic} />
+                <Route path={`${this.props.match.path}/back-end`} component={ ()=><BackEndTopic title="you are backend node topic"/>} />
+               
             </div>
         );
     }
